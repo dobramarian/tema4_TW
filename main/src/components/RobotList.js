@@ -23,14 +23,18 @@ class RobotList extends Component {
 			})			
 		})
 	}
+	onAdd(){
+        console.log("submit");
+    }
 	render() {
 		return (
 			<div>
-				 
+				<RobotForm onAdd={this.onAdd}></RobotForm>
 				{
 					this.state.robots.map((e, i) => 
 						<Robot item={e} key={i} />
 					)
+
 				}
 			</div>
 		)
